@@ -57,12 +57,9 @@ pipeline {
             echo 'Build failed!'
         }
     }
-
-   triggers {
-    cron('H 5 * * 1-5') // כל יום שני עד שישי בשעה 05:30
-}
+    
 triggers {
-    cron('H 14 * * 1-5') // כל יום שני עד שישי בשעה 14:00
+    cron('30 5 * * 1\n0 14 * * *')
 }
 
 }
