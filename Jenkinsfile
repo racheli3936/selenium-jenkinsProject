@@ -1,9 +1,12 @@
 pipeline {
-    agent any
+   agent
+    {
+        label 'verisoft-2'
+    }
 
     parameters {
-        string(name: 'https://github.com/racheli3936/selenium-jenkinsProject.git', defaultValue: 'https://github.com/racheli3936/selenium-jenkinsProject.git', description: 'כתובת ה-Repository')
-        string(name: 'main', defaultValue: 'main', description: 'שם הבראנצ לביצוע')
+         string(name: 'REPO_URL', defaultValue:  'https://github.com/racheli3936/selenium-jenkinsProject.git', description: 'Repository_url')
+        string(name: 'BRANCH_NAME', defaultValue: 'main', description: 'branch_name')
     }
 
     environment {
